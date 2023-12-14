@@ -1,5 +1,5 @@
 # final_project_ossw
-For the final project of the course Open Source SW, the assignment was to find the best model to fit the data points using Scikit Learn.
+For the final project of the course Open Source SW, the assignment was to find the best model to fit the data points using scikit-learn.
 
 ## Dataset
 The dataset is a tumor dataset. The dataset contains MRI information of various brain tumors. THe tumor_dataset are classified in 4 folders, each containing the data of a different or no tumor. The folders are:
@@ -20,7 +20,7 @@ To find the best model, I have used a variety of models and compared their accur
 * K-Nearest Neighbors
 
 ### PreSelection
-In the file 'find_best_model.ipynb', the training data is used to train and test the model (using train_test_split function of sklearn). The random state is set as 2 to compare the models. The accuracy scores of the classification methods (rounded with 3 decimals) are as follows:
+In the file 'find_best_model.ipynb', the training data is used to train and test the model (using train_test_split function of scikit-learn). The random state is set as 2 to compare the models. The accuracy scores of the classification methods (rounded with 3 decimals) are as follows:
 1. Random Forest (0.891)
 2. Support Vector Machine (0.830)
 3. Logistic Regression (0.815)
@@ -32,13 +32,23 @@ In the file 'find_best_model.ipynb', the training data is used to train and test
 To compare the models, random state = 2 is used. It is decided to not find the best random state number as it takes too much time when that parameter is added to find the best parameters with gridsearch.
 
 ### GridSearch
-From the PreSelection, it is clear that Random Forest, SVM, and Logistic Regression are the top 3 classification methods in general to classificate tumors. To find the best model, GridSearch will be used to find the best parameters (for each model).
+From the PreSelection, it is clear that Random Forest, SVM, and Logistic Regression are the top 3 classification methods in general to classificate tumors. To find the best model, GridSearch will be used to find the best parameters (for each classification method model).
 
+After performing GridSearch, new models are created using the best parameters, will be trained with the tumor data, and will have a new accuracy.
+
+## Conclusion
+After finding the top 3 classification methods (through the PreSelection) and best parameters for the model using GridSearch, it is clear that the Random Forest model is the most accurate with the brain tumor dataset compared to Logistic Regression and SVM.
+ 
 ## Files
 The following files are used to define the best model:
 * final_project_cindy_ye_50231630.ipynb
    * In this file the best model is used to to
-* 
+* find_best_model.ipynb
+   * In this file is checked with classification methods models are the best in general.
+* gridsearch_log_reg.ipynb
+   * In this file GridSearch is performed for logistic regression. After finding the best parameters, the training data will be used to train the model. The new accuracy is used to find the best model after GridSearch.   
+* gridsearch_svm_random_forest.ipynb
+   * In this file GridSearch is performed for SVM and Random Forest. After finding the best parameters for each model, the training data will be used to train the models. The new accuracy of the models is used to find the best model after GridSearch.   
 
 ## Configuration
 
