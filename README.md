@@ -1,5 +1,5 @@
 # final_project_ossw
-For the final project of the course Open Source SW, the assignment was to find the best model to fit the data points using scikit-learn.
+For the final project of the course Open Source SW from Chung-Ang University, the assignment was to find the best model to fit the data points using scikit-learn.
 
 ## Dataset
 The dataset is a tumor dataset. The dataset contains MRI information of various brain tumors. The tumor_dataset are classified in 4 folders, each containing the data of a different or no tumor. The folders are:
@@ -42,7 +42,7 @@ After finding the top 3 classification methods (through the PreSelection) and be
 ## Files
 The following files are used to define the best model:
 * **final_project_cindy_ye_50231630.ipynb**
-   * In this file the best model is used to to
+   * In this file the best model is used to train and predict with training data.
 * **find_best_model.ipynb**
    * In this file is checked with classification methods models are the best in general.
 * **gridsearch_log_reg.ipynb**
